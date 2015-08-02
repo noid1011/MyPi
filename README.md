@@ -50,3 +50,9 @@ sudo mount -a
 sudo reboot
 ```
 ####Install forked-daapd
+
+```
+echo "deb http://www.gyfgafguf.dk/raspbian wheezy-backports/armhf/" | sudo tee -a /etc/apt/sources.list`
+sudo apt-get install forked-daapd
+sudo nano /etc/forked-daapd.conf
+```
