@@ -1,6 +1,6 @@
 # MyPi
 
-## raspi-config
+### raspi-config
 
 To expand filesystem, change user password and set timezone (in internationalisation options).
 
@@ -8,7 +8,7 @@ To expand filesystem, change user password and set timezone (in internationalisa
 
 `sudo reboot`
 
-## Download wifi settings
+### Download wifi settings
 
 ```
 wget https://raw.githubusercontent.com/noid1011/MyPi/master/interfaces
