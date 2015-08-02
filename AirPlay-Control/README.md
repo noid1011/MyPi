@@ -4,9 +4,9 @@
 cd ~
 sudo mkdir remote
 cd remote
-wget https://raw.githubusercontent.com/master/AirPlay-Control/watcher.py
-wget https://raw.githubusercontent.com/master/AirPlay-Control/pause.sh
-wget https://raw.githubusercontent.com/master/AirPlay-Control/pause.py
+wget https://raw.githubusercontent.com/noid1011/MyPi/master/AirPlay-Control/watcher.py
+wget https://raw.githubusercontent.com/noid1011/MyPi/master/AirPlay-Control/pause.sh
+wget https://raw.githubusercontent.com/noid1011/MyPi/master/AirPlay-Control/pause.py
 sudo chmod +x pause.sh
 sudo ./pause.sh
 sudo python pause.py
