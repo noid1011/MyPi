@@ -15,19 +15,13 @@ wget https://raw.githubusercontent.com/noid1011/MyPi/master/interfaces
 sudo cp interfaces /etc/network/
 sudo rm interfaces
 ```
-`sudo nano /etc/wpa_supplicant/wpa_supplicant.conf`
+```
+wget https://raw.githubusercontent.com/noid1011/MyPi/master/wpa_supplicant.conf
+sudo cp wpa_supplicant.conf /etc/wpa_supplicant/
+sudo rm wpa_supplicant.conf
+sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
+```
 
-ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
-update_config=1
-
-network={
-ssid="--------"
-proto=RSN
-key_mgmt=WPA-PSK
-pairwise=CCMP TKIP
-group=CCMP TKIP
-psk="--------"
-}
 
 ####Update Pi 
 
