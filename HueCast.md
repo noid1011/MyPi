@@ -24,10 +24,17 @@ sudo python random_colors.py
 cd ~
 wget https://bootstrap.pypa.io/ez_setup.py -O - | sudo python
 sudo pip install python-forecastio
-
+```
+####Install HueCast
+Some dependancies
+```
 sudo apt-get install build-essential libssl-dev libffi-dev python-dev
-
 sudo pip install cryptography 
 sudo pip install requests[security]
 ```
-
+get my modfied script and add API key
+```
+wget https://raw.githubusercontent.com/noid1011/MyPi/master/huecast.py
+sudo nano huecast.py
+```
+`sudo python huecast.py`
