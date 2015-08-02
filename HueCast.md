@@ -28,10 +28,6 @@ sudo pip install python-forecastio
 sudo apt-get install build-essential libssl-dev libffi-dev python-dev
 
 sudo pip install cryptography 
+sudo pip install requests[security]
 ```
-forecast/
 
-
-sudo apt-get install python-smbus ipython bluetooth bluez-utils \
-python-cwiid python-scipy python-numpy python-pygame \
-python-setuptools libsdl-dev
