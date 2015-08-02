@@ -91,7 +91,7 @@ Find the line that looks like this:
 
 You will want to edit this line so it looks like this:
 
-`start-stop-daemon --start --quiet --pidfile $PIDFILE --exec $DAEMON -- -d -a "Conservatory 2" -- -d hw:0 -t hardware -c "PCM" || return 2`
+`start-stop-daemon --start --quiet --pidfile $PIDFILE --exec $DAEMON -- -d -a "Conservatory" -- -d hw:0 -t hardware -c "PCM" || return 2`
 
 ```
 sudo update-rc.d shairport-sync defaults
