@@ -59,7 +59,10 @@ sudo nano /etc/forked-daapd.conf
 ```
 ```
 sudo /etc/init.d/forked-daapd restart
-
 tail /var/log/forked-daapd.log
 ```
+
+Pair remote
+`sudo nano /media/music/noid.remote`
+
 
