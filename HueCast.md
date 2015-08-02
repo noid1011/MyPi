@@ -40,5 +40,7 @@ sudo nano huecast.py
 `sudo python huecast.py`
 
 Add huecast to cron
+
 `sudo crontab -e`
+
 `*/10 * * * * python /home/pi/huecast.py`
