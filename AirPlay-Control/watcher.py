@@ -15,7 +15,7 @@ while True:
   input = GPIO.input(buttonPin)
   #if the last reading was low and this one high, print
   if ((not prev_input) and input):
-    os.system("python /home/pi/pause.py")
+    os.system("python /home/pi/remote/pause.py")
 
   #update previous input
   prev_input = input
