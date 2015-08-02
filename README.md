@@ -72,6 +72,7 @@ sudo apt-get install autoconf libtool libdaemon-dev libasound2-dev libpopt-dev
 sudo apt-get install avahi-daemon libavahi-client-dev
 sudo apt-get install libssl-dev
 ```
+
 ```
 cd ~
 git clone https://github.com/mikebrady/shairport-sync.git
@@ -79,18 +80,19 @@ git clone https://github.com/mikebrady/shairport-sync.git
 cd shairport-sync
 autoreconf -i -f && ./configure --with-alsa --with-avahi --with-ssl=openssl && make && sudo make install && cd ~
 
-rm -r shairport-sync/```
+rm -r shairport-sync/
 
-`sudo nano /etc/init.d/shairport-sync`
+sudo nano /etc/init.d/shairport-sync
+```
 
---Find the line that looks like this:
+Find the line that looks like this:
 
 `start-stop-daemon --start --quiet --pidfile $PIDFILE --exec $DAEMON -- -d || return 2`
 
 You will want to edit this line so it looks like this:
-```
-start-stop-daemon --start --quiet --pidfile $PIDFILE --exec $DAEMON -- -d -a "Conservatory 2" -- -d hw:0 -t hardware -c "PCM" || return 2
-```
+
+`start-stop-daemon --start --quiet --pidfile $PIDFILE --exec $DAEMON -- -d -a "Conservatory 2" -- -d hw:0 -t hardware -c "PCM" || return 2`
+
 ```
 sudo update-rc.d shairport-sync defaults
 
