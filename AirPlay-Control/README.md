@@ -1,7 +1,7 @@
 #AirPlay Control
 
 ```
-cd~
+cd ~
 sudo mkdir remote
 cd remote
 wget https://raw.githubusercontent.com/master/AirPlay-Control/watcher.py
