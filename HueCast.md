@@ -17,3 +17,21 @@ Test it
 wget https://raw.githubusercontent.com/noid1011/MyPi/master/random_colors.py 
 sudo python random_colors.py
 ```
+
+####Install forecastio
+
+```
+cd ~
+wget https://bootstrap.pypa.io/ez_setup.py -O - | sudo python
+sudo pip install python-forecastio
+
+sudo apt-get install build-essential libssl-dev libffi-dev python-dev
+
+sudo pip install cryptography 
+```
+forecast/
+
+
+sudo apt-get install python-smbus ipython bluetooth bluez-utils \
+python-cwiid python-scipy python-numpy python-pygame \
+python-setuptools libsdl-dev
