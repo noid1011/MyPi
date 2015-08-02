@@ -38,3 +38,7 @@ wget https://raw.githubusercontent.com/noid1011/MyPi/master/huecast.py
 sudo nano huecast.py
 ```
 `sudo python huecast.py`
+
+Add huecast to cron
+`sudo crontab -e`
+`*/10 * * * * python /home/pi/huecast.py`
