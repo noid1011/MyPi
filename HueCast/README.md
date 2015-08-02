@@ -14,7 +14,7 @@ Press sync on Hue Hub and get key
 
 Test it
 ```
-wget https://raw.githubusercontent.com/noid1011/MyPi/master/random_colors.py 
+wget https://raw.githubusercontent.com/noid1011/MyPi/master/HueCast/random_colors.py 
 sudo python random_colors.py
 ```
 
@@ -34,7 +34,7 @@ sudo pip install requests[security]
 ```
 get my modfied script and add API key
 ```
-wget https://raw.githubusercontent.com/noid1011/MyPi/master/huecast.py
+wget https://raw.githubusercontent.com/noid1011/MyPi/master/HueCast/huecast.py
 sudo nano huecast.py
 ```
 `sudo python huecast.py`
