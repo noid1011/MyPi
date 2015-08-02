@@ -80,7 +80,7 @@ git clone https://github.com/mikebrady/shairport-sync.git
 cd shairport-sync
 autoreconf -i -f && ./configure --with-alsa --with-avahi --with-ssl=openssl && make && sudo make install && cd ~
 
-rm -r shairport-sync/
+sudo rm -r shairport-sync/
 
 sudo nano /etc/init.d/shairport-sync
 ```
