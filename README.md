@@ -49,4 +49,4 @@ sudo apt-get install ntfs-3g
 sudo mount -a
 sudo reboot
 ```
-
+####Install forked-daapd
