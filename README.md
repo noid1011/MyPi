@@ -57,3 +57,9 @@ sudo apt-get update
 sudo apt-get install forked-daapd
 sudo nano /etc/forked-daapd.conf
 ```
+```
+sudo /etc/init.d/forked-daapd restart
+
+tail /var/log/forked-daapd.log
+```
+
