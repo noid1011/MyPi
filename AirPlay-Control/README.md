@@ -12,12 +12,10 @@ sudo ./pause.sh
 sudo python pause.py
 ```
 
-Add wathcer to /etc/rc.local
-
 ```
-sudo nano /etc/rc.local
-```
-Add
-```
-python /home/pi/remote/watcher.py
+sudo wget https://raw.githubusercontent.com/noid1011/MyPi/master/AirPlay-Control/airremote
+sudo mv airremote /etc/init.d/
+sudo chmod 755 /etc/init.d/airremote
+sudo update-rc.d airremote defaults
+sudo reboot
 ```
