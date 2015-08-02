@@ -5,7 +5,7 @@
 Phue: Full featured Python library to control the Philips Hue lighting system.
 
 ```
-sudo apt-get install python-pipy
+sudo apt-get install python-pip
 sudo pip install phue
 ```
 setup Phue
