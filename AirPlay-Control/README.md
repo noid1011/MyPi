@@ -29,8 +29,8 @@ select id,title from playlists;
 ```
 
 How to start playlist
-
+```
 curl "http://localhost:3689/login?pairing-guid=0x1&request-session-id=50" > /dev/null 2>&1
 curl "http://localhost:3689/ctrl-int/1/playspec?database-spec='dmap.persistentid:0x1'&container-spec='dmap.persistentid:[PLAYLISTID_HEX]'&container-item-spec='dmap.containeritemid:[ITEMID_HEX]'&session-id=50" > /dev/null 2>&1
 curl "http://localhost:3689/logout?session-id=50" >
-
+```
