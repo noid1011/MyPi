@@ -12,6 +12,7 @@ sudo ./pause.sh
 sudo python pause.py
 ```
 
+Start watcher on start
 ```
 sudo wget https://raw.githubusercontent.com/noid1011/MyPi/master/AirPlay-Control/airremote
 sudo mv airremote /etc/init.d/
