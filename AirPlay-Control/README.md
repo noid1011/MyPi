@@ -35,4 +35,11 @@ curl "http://localhost:3689/ctrl-int/1/playspec?database-spec='dmap.persistentid
 curl "http://localhost:3689/ctrl-int/1/shuffle_songs?session-id=50" > /dev/null 2>&1
 curl "http://localhost:3689/logout?session-id=50" > /dev/null 2>&1
 ```
-curl "http://localhost:3689/ctrl-int/1/shuffle_songs?session-id=50" > /dev/null 2>&1
+ Shuffle
+ 
+ ```
+ #!/bin/bash
+curl "http://localhost:3689/login?pairing-guid=0x1&request-session-id=51" > /dev/null 2>&1
+curl "http://localhost:3689/ctrl-int/1/setproperty?dacp.shufflestate=1&session-id=51"
+curl "http://localhost:3689/logout?session-id=51" > /dev/null 2>&1
+```
