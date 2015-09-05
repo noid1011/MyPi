@@ -98,7 +98,8 @@ def main():
         print "the forecast ",theforecast    
         thecol = round(tempcolor(ctemp=theforecast))
         print "Thecol= ",int(thecol)
-        hue_go = {'on':True, 'hue':int(thecol), 'bri':80, 'sat':255}
+        #hue_go = {'on':True, 'hue':int(thecol), 'bri':80, 'sat':255}
+        hue_go = {'hue':int(thecol), 'bri':99, 'sat':255}
     print "Setting the light with: ", hue_go
         
     b.set_light(1,hue_go) 
