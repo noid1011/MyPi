@@ -1,17 +1,23 @@
 #### Midnight script
 Going to shut some things down
 
-#ADP
+Get ADP
 
 ```
 wget https://dl.dropboxusercontent.com/u/3048074/adb
 chmod +x adb
-mv adb /bin/
+sudo mv adb /bin/
 ```
+
+Download bash script
 
 ```
 wget https://raw.githubusercontent.com/noid1011/MyPi/master/Midnight/midnight.sh
 chmod +x midnight.sh
+```
+
+add script to crontab
+```
 sudo crontab -e
 ```
 add:
