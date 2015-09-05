@@ -101,7 +101,8 @@ def main():
         hue_go = {'on':True, 'hue':int(thecol), 'bri':80, 'sat':255}
     print "Setting the light with: ", hue_go
         
-    b.set_light(2,hue_go)   
+    b.set_light(1,hue_go) 
+    b.set_light(2,hue_go)
        
     print "light set! dohour=",dohour                
     
