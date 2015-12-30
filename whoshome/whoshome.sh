@@ -1,13 +1,13 @@
 #!/bin/bash
 cd  ~/whoshome/
 
-n_phone="android-e9405b0aed1dde6b"
-m_phone="MichellesiPhone"
+n_phone=
+m_phone=
 
 # Download router wifi page
 curl http://192.168.0.1/sky_index.html > DevicesConnected.html
 
-# Scrape phones to log file
+# Scrape downloaded file looking for phones, record to log file
 { date +'%Y-%m-%d %H:%M'; grep -c $m_phone DevicesConnected.html; grep -c $n_phone DevicesConnected.html; } | tr "\n" "\t" >> ~/logs/whoshome.log
 echo "" >> ~/logs/whoshome.log
 
