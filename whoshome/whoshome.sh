@@ -1,38 +1,46 @@
 #!/bin/bash
-cd /home/pi/whoshome/
+cd  ~/whoshome/
 
-n_phone="MAC_ADDRESS"
-m_phone="MAC_ADDRESS"
+n_phone="android-e9405b0aed1dde6b"
+m_phone="MichellesiPhone"
 
 # Download router wifi page
-curl -s -u admin:sky http://192.168.0.1/sky_lan_ip_setup_addmac.html > accessList.html
+curl http://192.168.0.1/sky_index.html > DevicesConnected.html
 
 # Scrape phones to log file
-{ date +'%Y-%m-%d %H:%M'; grep -c $m_phone accessList.html; grep -c $n_phone accessList.html; } | tr "\n" "\t" >> whoshome.log
-echo "" >> whoshome.log
+{ date +'%Y-%m-%d %H:%M'; grep -c $m_phone DevicesConnected.html; grep -c $n_phone DevicesConnected.html; } | tr "\n" "\t" >> ~/logs/whoshome.log
+echo "" >> ~/logs/whoshome.log
 
-## Nik
-# Returs 1 if phone present
-grep -c $n_phone accessList.html
+## Niks phone
+#
+# Check if the last two entries in the log file for the user are different from the 3rd from last and chnage staus
+#
+##
 
-if [ $? -eq 0 ]; then
-  if [ -f ./niksphone ]
-    then
-          echo "niks in"
-    else
-      echo "niks back"
-      ./pushbullet.sh "Nik's Home"
-
-          echo "niks back" > niksphone
-  fi
-else
-    if [ -f ./niksphone ]
-    then
-          rm niksphone
-          echo "niks left"
-          ./pushbullet.sh "Nik's Left"
-
-    else
-      echo "niks away"
-  fi
+if [ $(tail -1 ~/logs/whoshome.log | head -1 | cut -f3) == "0" ] && [ $(tail -2 ~/logs/whoshome.log | head -1 | cut -f3) == "0" ] && [ $(tail -3 ~/logs/whoshome.log | head -1 | cut -f3) == "1" ]; then
+  echo "niks gone out"
+  ~/scripts/pushbullet.sh "$(date +'%Y-%m-%d %H:%M') Nik has left"
 fi
+
+if [ $(tail -1 ~/logs/whoshome.log | head -1 | cut -f3) == "1" ] && [ $(tail -2 ~/logs/whoshome.log | head -1 | cut -f3) == "1" ] && [ $(tail -3 ~/logs/whoshome.log | head -1 | cut -f3) == "0" ]; then
+  echo "niks  back"
+  ~/scripts/pushbullet.sh "$(date +'%Y-%m-%d %H:%M') Nik is back"
+fi
+
+
+## Michells  phone
+#
+# Check if the last two entries in the log file for the user are different from the 3rd from last and chnage staus
+#
+##
+
+if [ $(tail -1 ~/logs/whoshome.log | head -1 | cut -f2) == "0" ] && [ $(tail -2 ~/logs/whoshome.log | head -1 | cut -f2) == "0" ] && [ $(tail -3 ~/logs/whoshome.log | head -1 | cut -f2) == "1" ]; then
+  echo "Michelle's gone out"
+  ~/scripts/pushbullet.sh "$(date +'%Y-%m-%d %H:%M') left"
+fi
+
+if [ $(tail -1 ~/logs/whoshome.log | head -1 | cut -f2) == "1" ] && [ $(tail -2 ~/logs/whoshome.log | head -1 | cut -f2) == "1" ] && [ $(tail -3 ~/logs/whoshome.log | head -1 | cut -f2) == "0" ]; then
+  echo "Michelle's back"
+  ~/scripts/pushbullet.sh "$(date +'%Y-%m-%d %H:%M') back"
+fi
+
