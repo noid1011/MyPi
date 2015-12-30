@@ -1,8 +1,8 @@
 #!/bin/bash
 cd  ~/whoshome/
 
-n_phone=
-m_phone=
+# load phones from config file
+source whoshome.cfg
 
 # Download router wifi page
 curl http://192.168.0.1/sky_index.html > DevicesConnected.html
