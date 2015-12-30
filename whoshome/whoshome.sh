@@ -44,3 +44,4 @@ if [ $(tail -1 ~/logs/whoshome.log | head -1 | cut -f2) == "1" ] && [ $(tail -2 
   ~/scripts/pushbullet.sh "$(date +'%Y-%m-%d %H:%M') back"
 fi
 
+tail ~/logs/whoshome.log --lines=3
