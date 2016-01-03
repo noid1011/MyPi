@@ -1,0 +1,3 @@
+#!/bin/bash
+
+curl -X POST https://maker.ifttt.com/trigger/<name>_home/with/key/<key>
