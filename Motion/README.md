@@ -41,21 +41,20 @@ Build steps:
     make
     sudo make install && ldconfig 
 
-Testing Motion with an IP camera:
-
-Before running motion, test your camera’s RTSP stream with a normal video player. In VLC that would be Media->Open Network Stream(Ctrl+N) and enter your RTSP url.
-
-If you get a live stream then you can make a copy of motion-dist.conf(found in /usr/local/etc/motion), name it motion.conf and change the options to suite your needs.
+make a copy of motion-dist.conf (found in /usr/local/etc/motion), name it motion.conf and change the options to suite your needs.
 
 I’ve commented out the default video device:
 ;videodevice /dev/video0
 
 and then uncommented and set the values for netcam_url and netcam_userpass like so:
+
 netcam_url rtsp://192.168.1.10:554/user=admin&password=&channel=1&stream=0.sdp?
 netcam_userpass admin:
 
 Start motion in setup mode to test your configuration:
+
 motion -s
+
 and wave your hand in front of the camera.You should have motion-triggered snapshot and video sequences in your target_folder.
 
 Now you can catch the bad guys !
