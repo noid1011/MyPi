@@ -2,6 +2,8 @@
 
 sudo apt-get -y install git
 sudo apt-get -y install dh-autoreconf
+sudo apt-get -y install libjpeg-dev
+
 
 sudo apt-get remove x264, libx264-dev, libavcodec, libavcodec, libavfilter, libavfilter, libavresample, libavutil, libpostproc, libswresample, libswscale, ffmpeg
 cd ~
