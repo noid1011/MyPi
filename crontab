@@ -1,3 +1,2 @@
-*/2 * * * * ~/whoshome/whoshome.sh
 */15 * * * * ~/scripts/noipupdater.sh
 0 0 * * * ~/scripts/midnight.sh
