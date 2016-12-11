@@ -3,6 +3,7 @@
 ###Update Pi
 
 `sudo apt-get update && sudo apt-get -y dist-upgrade && sudo apt-get -y --force-yes upgrade`
+
 `sudo apt-get -y install screen sshpass wakeonlan`
 
 
@@ -10,10 +11,11 @@
 
 http://raspi.tv/2012/how-to-set-up-keys-and-disable-password-login-for-ssh-on-your-raspberry-pi
 
-`cd ~`
-`mkdir .ssh` 
-`cd .ssh` 
-`echo '[[SHA KEY]]' > authorized_keys`
+`cd ~
+mkdir .ssh
+cd .ssh
+echo '[[SHA KEY]]' > authorized_keys`
+
 
 `chmod 700 ~/.ssh/`
 `chmod 600 ~/.ssh/authorized_keys`
