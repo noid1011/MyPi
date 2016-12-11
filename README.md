@@ -2,9 +2,9 @@
 
 ###Update Pi
 
-`sudo apt-get update && sudo apt-get -y dist-upgrade && sudo apt-get -y --force-yes upgrade`
+```sudo apt-get update && sudo apt-get -y dist-upgrade && sudo apt-get -y --force-yes upgrade
 
-`sudo apt-get -y install screen sshpass wakeonlan`
+sudo apt-get -y install screen sshpass wakeonlan```
 
 
 ###Setup ssh key login
@@ -38,8 +38,3 @@ To expand filesystem, change user password and set timezone (in internationalisa
 NTFS drivers
 ```
 sudo apt-get install ntfs-3g
-
-
-`
-
-
