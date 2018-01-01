@@ -1,4 +1,20 @@
 # MyPi
+###Setup WiFi
+
+Save wpa_supplicant.conf in root directory
+
+```
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
+country=GB
+
+network={
+    ssid="«your_SSID»"
+    psk="«your_PSK»"
+    key_mgmt=WPA-PSK
+}
+```
+
 
 ###Update Pi
 
