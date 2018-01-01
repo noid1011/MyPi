@@ -22,7 +22,7 @@ network={
     key_mgmt=WPA-PSK
 }
 ```
-
+## First Run
 
 ### Update Pi
 
