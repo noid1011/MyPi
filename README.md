@@ -25,15 +25,13 @@ network={
 ### Update Pi
 
  ```
-sudo raspi-config
-
 sudo apt-get update && sudo apt-get -y dist-upgrade && sudo apt-get -y --force-yes upgrade
 
 sudo apt-get -y install screen sshpass wakeonlan
 ```
 
 
-###Setup ssh key login
+### Setup ssh key login
 
 http://raspi.tv/2012/how-to-set-up-keys-and-disable-password-login-for-ssh-on-your-raspberry-pi
 
