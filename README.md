@@ -59,9 +59,19 @@ To expand filesystem, change user password and set timezone (in internationalisa
 `sudo reboot`
 
 
-#### Setting up HDD
+### Setting up HDD
 
 
 NTFS drivers
 ```
 sudo apt-get install ntfs-3g
+```
+
+## Installing Mosquito
+```
+sudo apt install -y mosquitto mosquitto-clients
+```
+To make Mosquitto auto start on boot up enter:
+```
+sudo systemctl enable mosquitto.service
+```
