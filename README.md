@@ -1,5 +1,10 @@
 # MyPi
-###Setup WiFi
+
+### Setup 
+
+place ssh file in root directory
+
+### Setup WiFi
 
 Save wpa_supplicant.conf in root directory
 
@@ -16,7 +21,7 @@ network={
 ```
 
 
-###Update Pi
+### Update Pi
 
  ```
 sudo apt-get update && sudo apt-get -y dist-upgrade && sudo apt-get -y --force-yes upgrade```
