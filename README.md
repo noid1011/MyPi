@@ -2,7 +2,7 @@
 
 ### Setup 
 
-place ssh file in root directory
+place blank ssh file in root directory
 
 ### Setup WiFi
 
@@ -25,7 +25,9 @@ network={
 ### Update Pi
 
  ```
-sudo apt-get update && sudo apt-get -y dist-upgrade && sudo apt-get -y --force-yes upgrade```
+sudo raspi-config
+
+sudo apt-get update && sudo apt-get -y dist-upgrade && sudo apt-get -y --force-yes upgrade
 
 sudo apt-get -y install screen sshpass wakeonlan
 ```
