@@ -1,8 +1,10 @@
-# MyPi
+# Pi Setup
 
-### Setup 
+## SD Card Setup 
 
-place blank ssh file in root directory
+### Enable SSH
+
+place blank file named SSH in root to enable SSH
 
 ### Setup WiFi
 
@@ -27,7 +29,7 @@ network={
  ```
 sudo apt-get update && sudo apt-get -y dist-upgrade && sudo apt-get -y --force-yes upgrade
 
-sudo apt-get -y install screen sshpass wakeonlan
+sudo apt-get -y install screen
 ```
 
 
@@ -39,7 +41,7 @@ http://raspi.tv/2012/how-to-set-up-keys-and-disable-password-login-for-ssh-on-yo
 cd ~
 mkdir .ssh
 cd .ssh
-echo '[[SHA KEY]]' > authorized_keys
+echo «your_public_key» > authorized_keys
 chmod 700 ~/.ssh/
 chmod 600 ~/.ssh/authorized_keys
 ```
