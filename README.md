@@ -7,6 +7,7 @@ place ssh file in root directory
 ### Setup WiFi
 
 Save wpa_supplicant.conf in root directory
+https://raspberrypi.stackexchange.com/questions/10251/prepare-sd-card-for-wifi-on-headless-pi
 
 ```
 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
@@ -56,7 +57,7 @@ To expand filesystem, change user password and set timezone (in internationalisa
 `sudo reboot`
 
 
-####Setting up HDD
+#### Setting up HDD
 
 
 NTFS drivers
