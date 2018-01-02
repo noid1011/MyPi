@@ -94,7 +94,7 @@ sudo apt-get install supervisor
 Create a file smartthings-mqtt-bridge.conf under /etc/supervisor/conf.d/, with the following, and restart supervisor.
 ```
 [program:smartthings-mqtt-bridge]
-command=/usr/local/bin/smartthings-mqtt-bridge
+command=/usr/bin/smartthings-mqtt-bridge
 autostart=true
 autorestart=true
 startretries=999999999999999
