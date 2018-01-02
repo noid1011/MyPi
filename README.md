@@ -81,3 +81,11 @@ sudo systemctl enable mosquitto.service
 curl -sL https://deb.nodesource.com/setup_9.x | sudo -E bash -
 sudo apt install nodejs
 ```
+
+### Installing Smartthings Bridge
+
+https://github.com/stjohnjohnson/smartthings-mqtt-bridge
+
+```
+sudo npm install -g smartthings-mqtt-bridge
+```
