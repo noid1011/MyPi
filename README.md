@@ -67,11 +67,17 @@ NTFS drivers
 sudo apt-get install ntfs-3g
 ```
 
-## Installing Mosquito
+### Installing Mosquito
 ```
 sudo apt install -y mosquitto mosquitto-clients
 ```
 To make Mosquitto auto start on boot up enter:
 ```
 sudo systemctl enable mosquitto.service
+```
+
+### Installing Node.js
+```
+curl -sL https://deb.nodesource.com/setup_9.x | sudo -E bash -
+sudo apt install nodejs
 ```
