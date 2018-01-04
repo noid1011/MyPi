@@ -89,13 +89,21 @@ https://github.com/stjohnjohnson/smartthings-mqtt-bridge
 ```
 sudo npm install -g smartthings-mqtt-bridge
 
-sudo apt-get install supervisor
 ```
-Create a file smartthings-mqtt-bridge.conf under /etc/supervisor/conf.d/, with the following, and restart supervisor.
+
+edit ~/config.yml
+
+### Install PM2
+
 ```
-[program:smartthings-mqtt-bridge]
-command=/usr/bin/smartthings-mqtt-bridge
-autostart=true
-autorestart=true
-startretries=999999999999999
+sudo npm install -g pm2
+pm2 startup
+```
+run displayed command
+sudo env PATH=$PATH:/usr/bin /usr/lib/nod...........
+```
+pm2 start smartthings-mqtt-bridge
+pm2 save
+sudo reboot
+pm2 list
 ```
