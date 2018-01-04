@@ -107,3 +107,17 @@ pm2 save
 sudo reboot
 pm2 list
 ```
+
+### Whos home script
+My router lists connected devices on its web page so we can download the page and search for known devices
+```
+#!/bin/bash
+if curl -s 192.168.0.1 | grep -c MichellesiPhone; then
+  mosquitto_pub -r -t smartthings/iphone/presence -m "present"
+else
+  mosquitto_pub -r -t smartthings/iphone/presence -m "not present"
+fi
+```
+
+then make the script executable and run from crontab
+
